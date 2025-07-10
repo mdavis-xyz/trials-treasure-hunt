@@ -115,6 +115,11 @@ function updateAllScores() {
         const scoreDisplay = trick.querySelector('.score-display');
         scoreDisplay.textContent = score + ' pts';
         totalScore += score;
+        if (score == 0) {
+            trick.classList.remove('completed');
+        } else {
+            trick.classList.add('completed');
+        }
     });
     
     document.getElementById('total-points').textContent = totalScore;

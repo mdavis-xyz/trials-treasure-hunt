@@ -84,6 +84,10 @@ details {
     border-left: 4px solid #007bff;
 }
 
+.trick.completed {
+    background: rgb(171, 208, 171);
+}
+
 .trick-header {
     display: flex;
     justify-content: space-between;
@@ -240,6 +244,11 @@ input[type="number"]:focus {
 }
 
 img {
+ max-width: 100%;
+ border-radius: 8px;
+}
+
+video {
  max-width: 100%;
  border-radius: 8px;
 }

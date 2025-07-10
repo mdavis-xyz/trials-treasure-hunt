@@ -28,7 +28,7 @@
             data-category="{{ category['id'] }}">
             <div class="trick-header">
                 <div class="trick-name">
-                    {{ task['summary'] }}
+                    {{ task['name'] }}
                 </div>
                 <div class="{{ 'base-points negative' if task['points'] < 0 else 'base-points' }}">
                     {{ task['points'] }} pts
@@ -56,6 +56,18 @@
                 {% for img in task['details'].get('photos', []) %}
                 <img src="{{ img['path'] }}" alt="{{ img.get('alt', 'photo') }}">
                 {% endfor %}
+
+                {% if task['details'].get('location') %}
+                <iframe src="{{ task['details']['location'] }}" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                {% endif %}
+
+                {% if task['details'].get('video') %}
+                <video autoplay muted loop playsinline>
+                    {% for vf in task['details']['video'] %}
+                    <source src="{{ vf['path'] }}" type="{{ vf['type'] }}">
+                    {% endfor %}
+                </video>
+                {% endif %}
 
                 </div>
             </details>

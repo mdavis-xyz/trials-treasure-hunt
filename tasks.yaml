@@ -1,24 +1,206 @@
-- id: jumps
-  name: sauts
+- name: sauts
   tasks:
-  - id: hop-up-curb
-    summary: Hop up a curb
+  - name: Hop up a curb
     multipliers: true
     points: 3
-  - id: hop-up-stairs
-    summary: Hop up stairs
-    explanation: Jump one step per time, or many steps in one go.
+  - name: Hop down a curb
+    explanation: Hop or roll down
+    multipliers: true
+    points: 3
+  - name: Hop up a curb no hands
+    explanation: Do not hold on to the seat
+    multipliers: true
+    points: 4
+  - name: Hop up a steep slope
+    multipliers: true
+    points: 4
+  - name: Hop up a curb front on
+    explanation: Hop forwards, not sideways
+    multipliers: true
+    points: 4
+  - name: Hop up stairs
+    explanation: Jump one step per time
     multipliers: true
     points: 3
     unit: step
-- id: obstacles
-  name: obstacles
+  - name: Leap over stairs
+    explanation: Jump up many steps in one leap
+    multipliers: true
+    points: 4
+    unit: step
+  - name: Ride down stairs
+    multipliers: true
+    points: 5
+    unit: step
+  - name: Leap down stairs
+    explanation: Jump down many steps in one leap
+    multipliers: true
+    points: 4
+    unit: step
+  - name: High Jump
+    explanation: Jump up to a platform
+    multipliers: true
+    points: 1
+    unit: 10cm
+  - name: Long Jump
+    explanation: Jump far horizontally
+    multipliers: true
+    points: 1
+    unit: 10cm
+  - name: Drop
+    explanation: Jump down from something high
+    multipliers: true
+    points: 1
+    unit: 10cm
+- name: riding
   tasks:
-  - id: lego
-    summary: Lego Bolard
+  - name: Ride on grass
+    explanation: At least 10 meters
+    multipliers: true
+    points: 1
+  - name: Ride seat infront
+    explanation: While riding, pull the seat out from between your legs, and hold it infront of you
+    multipliers: true
+    points: 3
+  - name: Ride seat behind
+    explanation: While riding, pull the seat out from between your legs, and hold it behind you
+    multipliers: true
+    points: 3
+  - name: Weave between bolards
+    points: 1
+    # TODO: add photo
+  - name: one-foot
+    explanation: Ride with only one foot on the pedal
+    multipliers: true
+    points: 3
+  - name: wheel walk
+    multipliers: true
+    points: 5
+  - name: glide
+    multipliers: true
+    points: 10
+  - name: ride backwards
+    multipliers: true
+    points: 3
+  - name: ride up a steep hill
+    multipliers: true
+    points: 1
+  - name: ride down a steep hill
+    multipliers: true
+    points: 1
+  - name: ride a skinny
+    multipliers: true
+    points: 8
+    # TODO: photo
+- name: obstacles
+  tasks:
+  - name: Lego Bolard
     points: 10
     details:
       text: You may mount and dismount ontop of the bolard. After mounting, you must hop only ontop of the bumps.
       photos:
       - path: "images/lego/small.jpg"
         alt: "lego bolard"
+  - name: Jump over water
+    points: 10
+  - name: Unicycle falls into water
+    points: -10
+  - name: Unicyclist falls (os jumps) into water
+    points: 5
+  - name: Ride on kids play equipment
+    points: 5
+- name: tricks
+  tasks:
+  - name: Jump Rev
+    explanation: Ride, jump, rotate the wheel half a revolution (180 degrees)
+    points: 2
+    multipliers: true
+  - name: Different Monuts
+    explanation: Mount the unicycle many different ways
+    details:
+      text: Roll-back mount, running mount, side mount, kick-up mount
+    points: 3
+    units: mount
+  - name: Mount while off the ground
+    explanation: e.g. stand on a table and mount
+    points: 1
+  - name: Grind
+    points: 15
+  - name: Crank grab
+    points: 10
+- name: Locations
+  tasks:
+  - name: Across Sloped Curbs
+    points: 1
+    # TODO: add photo
+  - name: Along Sloped Curbs
+    points: 2
+    # TODO: add photo
+  - name: Round Ramp at Action Music
+    points: 3
+    details:
+      # TODO: add photo
+      location: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d207.62612826544571!2d1.4364183954819585!3d43.598927882526894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDPCsDM1JzU2LjUiTiAxwrAyNicxMS44IkU!5e1!3m2!1sen!2sfr!4v1752156561638!5m2!1sen!2sfr"
+  - name: Cross 3 bridges in 10 minutes
+    points: 1
+  - name: Ride an electric bolard while it moves up
+    points: 20
+    details:
+      video: 
+      - path: videos/bolard/output.mp4
+        type: video/mp4
+      - path: videos/bolard/output.webm
+        type: video/webm
+  - name: Ride up an anti-velo ramp
+    points: 3
+    # TODO: photo
+  - name: Trigger a car speed sign
+    points: 1
+    unit: "km/h"
+    details:
+      photos:
+      - path: images/speed/small.jpg
+        alt: Speed sign
+  - name: Merry Go Round
+    explanation: Ride around the outside of a merry-go-round, at the same speed as it
+    points: 1
+  - name: Hop over a pedestrian crossing, touching only the white parts
+    points: 5
+  - name: Hop on the furniture on Pont Saint-Pierre
+    points: 10
+    details:
+      photos:
+      - path: images/bridge-furniture/small.jpg
+        alt: Photo of seat on bridge
+      location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.820327825525!2d1.432445076174121!3d43.60250897110457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebb65a20999b5%3A0x72c37c4cc3ed9ede!2sPont%20Saint-Pierre!5e1!3m2!1sen!2sfr!4v1752158787271!5m2!1sen!2sfr"
+- name: silly
+  tasks:
+  - name: Buy something and eat it
+    explanation: Without getting off your unicycle
+    points: 3
+  - name: Get pulled by an electric velo
+    points: 2
+  - name: Play petanque on a unicycle
+    points: 5
+  - name: Outrun a tram
+    points: 6
+  - name: Do a chin up
+    explanation: Whilst on a unicycle
+    points: 3
+  - name: Outrun a (moving) bicycle
+    points: 3
+  - name: Ride while holding hands
+    explanation: Points per unicyclist in the line, to each unicyclist
+    points: 1
+    unit: rider
+  - name: Jump over your lunch
+    points: 5
+  - name: Ride 20m with a cup of water on your head
+    points: 5
+  - name: Ride along the edge of the Garonne
+    points: 5
+    details:
+      photos:
+      - path: "images/garonne/small.jpg"
+        alt: "Garonne photo"
+  

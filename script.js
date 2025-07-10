@@ -63,10 +63,10 @@ function calculateTrickScore(trick) {
     }
     
     // Apply multipliers
-    if (personalBestCheckbox && personalBestCheckbox.checked) {
+    if (personalBestCheckbox?.checked) {
         score *= 2;
     }
-    if (holdingOnCheckbox && holdingOnCheckbox.checked) {
+    if (holdingOnCheckbox?.checked) {
         score *= 0.5;
     }
     
@@ -74,8 +74,9 @@ function calculateTrickScore(trick) {
 }
 
 function updateCategoryProgress() {
-    const categories = ['sauts', 'lieux', 'amusants'];
-    
+    const categories = Array.from(document.querySelectorAll('section.category'))
+        .map(section => section.dataset.category);
+    console.log(`categories: ${categories}`);
     categories.forEach(category => {
         const tricks = document.querySelectorAll(`[data-category="${category}"]`);
         let total = 0;
@@ -99,7 +100,7 @@ function updateCategoryProgress() {
             }
         });
         
-        const progressElement = document.querySelector(`[data-category="${category}"]`);
+        const progressElement = document.querySelector(`span.category-progress[data-category="${category}"]`);
         if (progressElement) {
             progressElement.textContent = `(${completed} / ${total})`;
         }

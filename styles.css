@@ -35,14 +35,14 @@ body {
     margin-bottom: 5px;
 }
 
-.section {
+.category {
     background: #f8f9fa;
     margin: 15px;
     border-radius: 10px;
     overflow: hidden;
 }
 
-.section-header {
+.category-header {
     background: #495057;
     color: white;
     padding: 12px 15px;
@@ -53,11 +53,11 @@ body {
     position: relative;
 }
 
-.section-header::-webkit-details-marker {
+.category-header::-webkit-details-marker {
     display: none;
 }
 
-.section-header::after {
+.category-header::after {
     content: '▼';
     position: absolute;
     right: 15px;
@@ -66,7 +66,7 @@ body {
     transition: transform 0.3s ease;
 }
 
-details[open] .section-header::after {
+details[open] .category-header::after {
     transform: translateY(-50%) rotate(180deg);
 }
 

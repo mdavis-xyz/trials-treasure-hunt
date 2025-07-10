@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for HTML5 for Linux version 5.6.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1.0">
+  <title>Chasse au trésor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Toulouse Treasure Hunt</h1>
+      <p>Feuille de score pour tricks de monocycle</p>
+    </div>
+    {% for category in all_tasks %}
+    <section class="category" data-category="{{ category['id'] }}">
+      <details>
+        <summary class="category-header">
+          {{ category['name'] }}
+          <span class="category-progress" data-category=
+          "{{ category['id'] }}"></span>
+        </summary>
+        {% for task in category['tasks'] %}
+        <div class="trick" data-trick-id="{{ task['id'] }}"
+            data-category="{{ category['id'] }}">
+            <div class="trick-header">
+                <div class="trick-name">
+                    {{ task['summary'] }}
+                </div>
+                <div class="{{ 'base-points negative' if task['points'] < 0 else 'base-points' }}">
+                    {{ task['points'] }} pts
+                    {% if task.get('unit') %}
+                    / {{ task['unit'] }}
+                    {% endif %}
+                </div>
+            </div>
+            {% if task.get('explanation') %}
+            <div class="explanation-content">
+              {{ task['explanation'] }}
+            </div>
+            {% endif %}
+
+            {% if task.get('details') %}
+            <details class="explanation-details">
+                <summary>
+                Details
+                </summary>
+                <div class="explanation-content">
+                {% if task['details'].get('text') %}
+                    {{ task['details']['text'] }}
+                {% endif %}
+
+                {% for img in task['details'].get('photos', []) %}
+                <img src="{{ img['path'] }}" alt="{{ img.get('alt', 'photo') }}">
+                {% endfor %}
+
+                </div>
+            </details>
+            {% endif %}
+
+            <div class="controls">
+                {% if task.get('unit') %}
+                <label for="{{ task['id'] }}-count">Nombre de
+                {{ task['unit'] }}:</label> <input type="number" id=
+                "{{ task['id'] }}-count" min="0" value="0" class=
+                "quantity">
+                {% else %}
+                <div class="checkbox-group">
+                    <input type="checkbox" id="{{ task['id'] }}-completed"
+                    class="completed"> <label for=
+                    "{{ task['id'] }}-completed">Réussi</label>
+                </div>
+                {% endif %}
+                <div class="score-display">
+                    0 pts
+                </div>
+            </div>
+            {% if task.get('multipliers') %}
+            <div class="multiplier-controls">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="{{ task['id'] }}-pb" class=
+                    "personal-best"> <label for="{{ task['id'] }}-pb">Personal
+                    Best (×2)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="{{ task['id'] }}-holding"
+                    class="holding-on"> <label for=
+                    "{{ task['id'] }}-holding">En se tenant (÷2)</label>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}   
+      </details>
+    </section>
+    {% endfor %}
+    <div class="total-score">
+      Total: <span id="total-points">0</span> points
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

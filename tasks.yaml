@@ -1,0 +1,24 @@
+- id: jumps
+  name: sauts
+  tasks:
+  - id: hop-up-curb
+    summary: Hop up a curb
+    multipliers: true
+    points: 3
+  - id: hop-up-stairs
+    summary: Hop up stairs
+    explanation: Jump one step per time, or many steps in one go.
+    multipliers: true
+    points: 3
+    unit: step
+- id: obstacles
+  name: obstacles
+  tasks:
+  - id: lego
+    summary: Lego Bolard
+    points: 10
+    details:
+      text: You may mount and dismount ontop of the bolard. After mounting, you must hop only ontop of the bumps.
+      photos:
+      - path: "images/lego/small.jpg"
+        alt: "lego bolard"

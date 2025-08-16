@@ -74,7 +74,7 @@
                     Hop down a curb
                 </div>
                 <div class="base-points">
-                    3 pts
+                    2 pts
                     
                 </div>
             </div>
@@ -354,7 +354,7 @@
                     Ride down stairs
                 </div>
                 <div class="base-points">
-                    5 pts
+                    3 pts
                     
                     / step
                     
@@ -398,7 +398,7 @@
                     Leap down stairs
                 </div>
                 <div class="base-points">
-                    4 pts
+                    3 pts
                     
                     / step
                     
@@ -446,7 +446,7 @@
                     High Jump
                 </div>
                 <div class="base-points">
-                    1 pts
+                    10 pts
                     
                     / 10cm
                     
@@ -494,7 +494,7 @@
                     Long Jump
                 </div>
                 <div class="base-points">
-                    1 pts
+                    4 pts
                     
                     / 10cm
                     
@@ -502,7 +502,7 @@
             </div>
             
             <div class="explanation-content">
-              Jump far horizontally
+              Jump far horizontally. Can be on the ground.
             </div>
             
 
@@ -535,6 +535,54 @@
             
         </div>
         
+        <div class="trick" data-trick-id="gap"
+            data-category="sauts">
+            <div class="trick-header">
+                <div class="trick-name">
+                    Gap
+                </div>
+                <div class="base-points">
+                    4 pts
+                    
+                    / 10cm
+                    
+                </div>
+            </div>
+            
+            <div class="explanation-content">
+              Jump far horizontally, from ontop of one object to another. (Can count the same jump for a gap and long jump.)
+            </div>
+            
+
+            
+
+            <div class="controls">
+                
+                <label for="gap-count">Nombre de
+                10cm:</label> <input type="number" id=
+                "gap-count" min="0" value="0" class=
+                "quantity">
+                
+                <div class="score-display">
+                    0 pts
+                </div>
+            </div>
+            
+            <div class="multiplier-controls">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="gap-pb" class=
+                    "personal-best"> <label for="gap-pb">Personal
+                    Best (×2)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="gap-holding"
+                    class="holding-on"> <label for=
+                    "gap-holding">En se tenant (÷2)</label>
+                </div>
+            </div>
+            
+        </div>
+        
         <div class="trick" data-trick-id="drop"
             data-category="sauts">
             <div class="trick-header">
@@ -542,7 +590,7 @@
                     Drop
                 </div>
                 <div class="base-points">
-                    1 pts
+                    5 pts
                     
                     / 10cm
                     
@@ -578,6 +626,49 @@
                     <input type="checkbox" id="drop-holding"
                     class="holding-on"> <label for=
                     "drop-holding">En se tenant (÷2)</label>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="trick" data-trick-id="hop-down-a-curb-while-riding-backwards"
+            data-category="sauts">
+            <div class="trick-header">
+                <div class="trick-name">
+                    Hop down a curb while riding backwards
+                </div>
+                <div class="base-points">
+                    5 pts
+                    
+                </div>
+            </div>
+            
+
+            
+
+            <div class="controls">
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="hop-down-a-curb-while-riding-backwards-completed"
+                    class="completed"> <label for=
+                    "hop-down-a-curb-while-riding-backwards-completed">Réussi</label>
+                </div>
+                
+                <div class="score-display">
+                    0 pts
+                </div>
+            </div>
+            
+            <div class="multiplier-controls">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="hop-down-a-curb-while-riding-backwards-pb" class=
+                    "personal-best"> <label for="hop-down-a-curb-while-riding-backwards-pb">Personal
+                    Best (×2)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="hop-down-a-curb-while-riding-backwards-holding"
+                    class="holding-on"> <label for=
+                    "hop-down-a-curb-while-riding-backwards-holding">En se tenant (÷2)</label>
                 </div>
             </div>
             
@@ -744,19 +835,38 @@
                 <div class="base-points">
                     1 pts
                     
+                    / bolard
+                    
                 </div>
             </div>
             
 
             
+            <details class="explanation-details">
+                <summary>
+                Details
+                </summary>
+                <div class="explanation-content">
+                
+
+                
+                <img src="images/bolard-weave/small.jpg" alt="bolards with arrows">
+                
+
+                
+
+                
+
+                </div>
+            </details>
+            
 
             <div class="controls">
                 
-                <div class="checkbox-group">
-                    <input type="checkbox" id="weave-between-bolards-completed"
-                    class="completed"> <label for=
-                    "weave-between-bolards-completed">Réussi</label>
-                </div>
+                <label for="weave-between-bolards-count">Nombre de
+                bolard:</label> <input type="number" id=
+                "weave-between-bolards-count" min="0" value="0" class=
+                "quantity">
                 
                 <div class="score-display">
                     0 pts
@@ -772,7 +882,7 @@
                     One-foot
                 </div>
                 <div class="base-points">
-                    3 pts
+                    5 pts
                     
                 </div>
             </div>
@@ -819,7 +929,7 @@
                     Wheel walk
                 </div>
                 <div class="base-points">
-                    5 pts
+                    10 pts
                     
                 </div>
             </div>
@@ -862,7 +972,7 @@
                     Glide
                 </div>
                 <div class="base-points">
-                    10 pts
+                    15 pts
                     
                 </div>
             </div>
@@ -1039,7 +1149,29 @@
                 </div>
             </div>
             
+            <div class="explanation-content">
+              On the tire
+            </div>
+            
 
+            
+            <details class="explanation-details">
+                <summary>
+                Details
+                </summary>
+                <div class="explanation-content">
+                
+
+                
+                <img src="images/skinny/small.jpg" alt="photo of skinny">
+                
+
+                
+
+                
+
+                </div>
+            </details>
             
 
             <div class="controls">
@@ -1065,6 +1197,93 @@
                     <input type="checkbox" id="ride-a-skinny-holding"
                     class="holding-on"> <label for=
                     "ride-a-skinny-holding">En se tenant (÷2)</label>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="trick" data-trick-id="still-stand"
+            data-category="riding">
+            <div class="trick-header">
+                <div class="trick-name">
+                    Still stand
+                </div>
+                <div class="base-points">
+                    2 pts
+                    
+                    / second
+                    
+                </div>
+            </div>
+            
+
+            
+
+            <div class="controls">
+                
+                <label for="still-stand-count">Nombre de
+                second:</label> <input type="number" id=
+                "still-stand-count" min="0" value="0" class=
+                "quantity">
+                
+                <div class="score-display">
+                    0 pts
+                </div>
+            </div>
+            
+            <div class="multiplier-controls">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="still-stand-pb" class=
+                    "personal-best"> <label for="still-stand-pb">Personal
+                    Best (×2)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="still-stand-holding"
+                    class="holding-on"> <label for=
+                    "still-stand-holding">En se tenant (÷2)</label>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="trick" data-trick-id="ride-down-a-steep-hill"
+            data-category="riding">
+            <div class="trick-header">
+                <div class="trick-name">
+                    Ride down a steep hill
+                </div>
+                <div class="base-points">
+                    1 pts
+                    
+                </div>
+            </div>
+            
+
+            
+
+            <div class="controls">
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="ride-down-a-steep-hill-completed"
+                    class="completed"> <label for=
+                    "ride-down-a-steep-hill-completed">Réussi</label>
+                </div>
+                
+                <div class="score-display">
+                    0 pts
+                </div>
+            </div>
+            
+            <div class="multiplier-controls">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="ride-down-a-steep-hill-pb" class=
+                    "personal-best"> <label for="ride-down-a-steep-hill-pb">Personal
+                    Best (×2)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="ride-down-a-steep-hill-holding"
+                    class="holding-on"> <label for=
+                    "ride-down-a-steep-hill-holding">En se tenant (÷2)</label>
                 </div>
             </div>
             
@@ -1101,7 +1320,7 @@
                 </summary>
                 <div class="explanation-content">
                 
-                    You may mount and dismount ontop of the bolard. After mounting, you must hop only ontop of the bumps.
+                    You may mount and dismount ontop of the bolard. After mounting, you can hop/ride on the bumps or the gaps in between.
                 
 
                 
@@ -1122,6 +1341,56 @@
                     <input type="checkbox" id="lego-bolard-completed"
                     class="completed"> <label for=
                     "lego-bolard-completed">Réussi</label>
+                </div>
+                
+                <div class="score-display">
+                    0 pts
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="trick" data-trick-id="lego-bolard---piques"
+            data-category="obstacles">
+            <div class="trick-header">
+                <div class="trick-name">
+                    Lego Bolard - Piques
+                </div>
+                <div class="base-points">
+                    10 pts
+                    
+                </div>
+            </div>
+            
+
+            
+            <details class="explanation-details">
+                <summary>
+                Details
+                </summary>
+                <div class="explanation-content">
+                
+                    You may mount and dismount ontop of the bolard. After mounting, you must hop only ontop of the bumps.
+                
+
+                
+                <img src="images/lego/small.jpg" alt="lego bolard">
+                
+
+                
+
+                
+
+                </div>
+            </details>
+            
+
+            <div class="controls">
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="lego-bolard---piques-completed"
+                    class="completed"> <label for=
+                    "lego-bolard---piques-completed">Réussi</label>
                 </div>
                 
                 <div class="score-display">
@@ -1191,11 +1460,11 @@
             
         </div>
         
-        <div class="trick" data-trick-id="unicyclist-falls-(os-jumps)-into-water"
+        <div class="trick" data-trick-id="unicyclist-falls-(or-jumps)-into-water"
             data-category="obstacles">
             <div class="trick-header">
                 <div class="trick-name">
-                    Unicyclist falls (os jumps) into water
+                    Unicyclist falls (or jumps) into water
                 </div>
                 <div class="base-points">
                     5 pts
@@ -1209,9 +1478,9 @@
             <div class="controls">
                 
                 <div class="checkbox-group">
-                    <input type="checkbox" id="unicyclist-falls-(os-jumps)-into-water-completed"
+                    <input type="checkbox" id="unicyclist-falls-(or-jumps)-into-water-completed"
                     class="completed"> <label for=
-                    "unicyclist-falls-(os-jumps)-into-water-completed">Réussi</label>
+                    "unicyclist-falls-(or-jumps)-into-water-completed">Réussi</label>
                 </div>
                 
                 <div class="score-display">
@@ -1250,6 +1519,55 @@
             </div>
             
         </div>
+        
+        <div class="trick" data-trick-id="hop-along-wooden-playground-poles"
+            data-category="obstacles">
+            <div class="trick-header">
+                <div class="trick-name">
+                    Hop along wooden playground poles
+                </div>
+                <div class="base-points">
+                    5 pts
+                    
+                    / pole
+                    
+                </div>
+            </div>
+            
+
+            
+            <details class="explanation-details">
+                <summary>
+                Details
+                </summary>
+                <div class="explanation-content">
+                
+
+                
+                <img src="images/wood-pole-steps/dragon-small.jpg" alt="Zoomed in">
+                
+
+                
+
+                
+
+                </div>
+            </details>
+            
+
+            <div class="controls">
+                
+                <label for="hop-along-wooden-playground-poles-count">Nombre de
+                pole:</label> <input type="number" id=
+                "hop-along-wooden-playground-poles-count" min="0" value="0" class=
+                "quantity">
+                
+                <div class="score-display">
+                    0 pts
+                </div>
+            </div>
+            
+        </div>
            
       </details>
     </section>
@@ -1262,11 +1580,11 @@
           "tricks"></span>
         </summary>
         
-        <div class="trick" data-trick-id="jump-rev"
+        <div class="trick" data-trick-id="half-rev"
             data-category="tricks">
             <div class="trick-header">
                 <div class="trick-name">
-                    Jump Rev
+                    Half Rev
                 </div>
                 <div class="base-points">
                     2 pts
@@ -1284,9 +1602,9 @@
             <div class="controls">
                 
                 <div class="checkbox-group">
-                    <input type="checkbox" id="jump-rev-completed"
+                    <input type="checkbox" id="half-rev-completed"
                     class="completed"> <label for=
-                    "jump-rev-completed">Réussi</label>
+                    "half-rev-completed">Réussi</label>
                 </div>
                 
                 <div class="score-display">
@@ -1296,27 +1614,123 @@
             
             <div class="multiplier-controls">
                 <div class="checkbox-group">
-                    <input type="checkbox" id="jump-rev-pb" class=
-                    "personal-best"> <label for="jump-rev-pb">Personal
+                    <input type="checkbox" id="half-rev-pb" class=
+                    "personal-best"> <label for="half-rev-pb">Personal
                     Best (×2)</label>
                 </div>
                 <div class="checkbox-group">
-                    <input type="checkbox" id="jump-rev-holding"
+                    <input type="checkbox" id="half-rev-holding"
                     class="holding-on"> <label for=
-                    "jump-rev-holding">En se tenant (÷2)</label>
+                    "half-rev-holding">En se tenant (÷2)</label>
                 </div>
             </div>
             
         </div>
         
-        <div class="trick" data-trick-id="different-monuts"
+        <div class="trick" data-trick-id="full-rev"
             data-category="tricks">
             <div class="trick-header">
                 <div class="trick-name">
-                    Different Monuts
+                    Full Rev
                 </div>
                 <div class="base-points">
                     3 pts
+                    
+                </div>
+            </div>
+            
+            <div class="explanation-content">
+              Ride, jump, rotate the wheel a full revolution (360 degrees)
+            </div>
+            
+
+            
+
+            <div class="controls">
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="full-rev-completed"
+                    class="completed"> <label for=
+                    "full-rev-completed">Réussi</label>
+                </div>
+                
+                <div class="score-display">
+                    0 pts
+                </div>
+            </div>
+            
+            <div class="multiplier-controls">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="full-rev-pb" class=
+                    "personal-best"> <label for="full-rev-pb">Personal
+                    Best (×2)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="full-rev-holding"
+                    class="holding-on"> <label for=
+                    "full-rev-holding">En se tenant (÷2)</label>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="trick" data-trick-id="hop-twist"
+            data-category="tricks">
+            <div class="trick-header">
+                <div class="trick-name">
+                    Hop Twist
+                </div>
+                <div class="base-points">
+                    3 pts
+                    
+                </div>
+            </div>
+            
+            <div class="explanation-content">
+              Ride, jump, spin left/right 180 degrees, then land backwards
+            </div>
+            
+
+            
+
+            <div class="controls">
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="hop-twist-completed"
+                    class="completed"> <label for=
+                    "hop-twist-completed">Réussi</label>
+                </div>
+                
+                <div class="score-display">
+                    0 pts
+                </div>
+            </div>
+            
+            <div class="multiplier-controls">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="hop-twist-pb" class=
+                    "personal-best"> <label for="hop-twist-pb">Personal
+                    Best (×2)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="hop-twist-holding"
+                    class="holding-on"> <label for=
+                    "hop-twist-holding">En se tenant (÷2)</label>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="trick" data-trick-id="different-mounts"
+            data-category="tricks">
+            <div class="trick-header">
+                <div class="trick-name">
+                    Different Mounts
+                </div>
+                <div class="base-points">
+                    3 pts
+                    
+                    / mount
                     
                 </div>
             </div>
@@ -1333,7 +1747,7 @@
                 </summary>
                 <div class="explanation-content">
                 
-                    Roll-back mount, running mount, side mount, kick-up mount
+                    Roll-back mount, running mount, side mount, kick-up mount etc. Double points if it's your first time ever.
                 
 
                 
@@ -1348,11 +1762,10 @@
 
             <div class="controls">
                 
-                <div class="checkbox-group">
-                    <input type="checkbox" id="different-monuts-completed"
-                    class="completed"> <label for=
-                    "different-monuts-completed">Réussi</label>
-                </div>
+                <label for="different-mounts-count">Nombre de
+                mount:</label> <input type="number" id=
+                "different-mounts-count" min="0" value="0" class=
+                "quantity">
                 
                 <div class="score-display">
                     0 pts
@@ -1368,7 +1781,7 @@
                     Mount while off the ground
                 </div>
                 <div class="base-points">
-                    1 pts
+                    3 pts
                     
                 </div>
             </div>
@@ -1393,6 +1806,19 @@
                 </div>
             </div>
             
+            <div class="multiplier-controls">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="mount-while-off-the-ground-pb" class=
+                    "personal-best"> <label for="mount-while-off-the-ground-pb">Personal
+                    Best (×2)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="mount-while-off-the-ground-holding"
+                    class="holding-on"> <label for=
+                    "mount-while-off-the-ground-holding">En se tenant (÷2)</label>
+                </div>
+            </div>
+            
         </div>
         
         <div class="trick" data-trick-id="grind"
@@ -1402,7 +1828,51 @@
                     Grind
                 </div>
                 <div class="base-points">
-                    15 pts
+                    5 pts
+                    
+                    / 5cm
+                    
+                </div>
+            </div>
+            
+
+            
+
+            <div class="controls">
+                
+                <label for="grind-count">Nombre de
+                5cm:</label> <input type="number" id=
+                "grind-count" min="0" value="0" class=
+                "quantity">
+                
+                <div class="score-display">
+                    0 pts
+                </div>
+            </div>
+            
+            <div class="multiplier-controls">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="grind-pb" class=
+                    "personal-best"> <label for="grind-pb">Personal
+                    Best (×2)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="grind-holding"
+                    class="holding-on"> <label for=
+                    "grind-holding">En se tenant (÷2)</label>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="trick" data-trick-id="pedal-grab"
+            data-category="tricks">
+            <div class="trick-header">
+                <div class="trick-name">
+                    Pedal grab
+                </div>
+                <div class="base-points">
+                    10 pts
                     
                 </div>
             </div>
@@ -1413,13 +1883,26 @@
             <div class="controls">
                 
                 <div class="checkbox-group">
-                    <input type="checkbox" id="grind-completed"
+                    <input type="checkbox" id="pedal-grab-completed"
                     class="completed"> <label for=
-                    "grind-completed">Réussi</label>
+                    "pedal-grab-completed">Réussi</label>
                 </div>
                 
                 <div class="score-display">
                     0 pts
+                </div>
+            </div>
+            
+            <div class="multiplier-controls">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="pedal-grab-pb" class=
+                    "personal-best"> <label for="pedal-grab-pb">Personal
+                    Best (×2)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="pedal-grab-holding"
+                    class="holding-on"> <label for=
+                    "pedal-grab-holding">En se tenant (÷2)</label>
                 </div>
             </div>
             
@@ -1453,6 +1936,235 @@
                 </div>
             </div>
             
+            <div class="multiplier-controls">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="crank-grab-pb" class=
+                    "personal-best"> <label for="crank-grab-pb">Personal
+                    Best (×2)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="crank-grab-holding"
+                    class="holding-on"> <label for=
+                    "crank-grab-holding">En se tenant (÷2)</label>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="trick" data-trick-id="crank/pedal-grab-from-above"
+            data-category="tricks">
+            <div class="trick-header">
+                <div class="trick-name">
+                    Crank/pedal grab from above
+                </div>
+                <div class="base-points">
+                    10 pts
+                    
+                </div>
+            </div>
+            
+            <div class="explanation-content">
+              Mount something tall. Jump down into a pedal or crank grab, then back up.
+            </div>
+            
+
+            
+            <details class="explanation-details">
+                <summary>
+                Details
+                </summary>
+                <div class="explanation-content">
+                
+
+                
+                <img src="images/crank-grab-down/screenshot.png" alt="Diagram">
+                
+
+                
+
+                
+
+                </div>
+            </details>
+            
+
+            <div class="controls">
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="crank/pedal-grab-from-above-completed"
+                    class="completed"> <label for=
+                    "crank/pedal-grab-from-above-completed">Réussi</label>
+                </div>
+                
+                <div class="score-display">
+                    0 pts
+                </div>
+            </div>
+            
+            <div class="multiplier-controls">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="crank/pedal-grab-from-above-pb" class=
+                    "personal-best"> <label for="crank/pedal-grab-from-above-pb">Personal
+                    Best (×2)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="crank/pedal-grab-from-above-holding"
+                    class="holding-on"> <label for=
+                    "crank/pedal-grab-from-above-holding">En se tenant (÷2)</label>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="trick" data-trick-id="seat-drag"
+            data-category="tricks">
+            <div class="trick-header">
+                <div class="trick-name">
+                    Seat Drag
+                </div>
+                <div class="base-points">
+                    10 pts
+                    
+                </div>
+            </div>
+            
+
+            
+            <details class="explanation-details">
+                <summary>
+                Details
+                </summary>
+                <div class="explanation-content">
+                
+
+                
+                <img src="images/seat-drag/infront.png" alt="Seat drag trick">
+                
+
+                
+
+                
+
+                </div>
+            </details>
+            
+
+            <div class="controls">
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="seat-drag-completed"
+                    class="completed"> <label for=
+                    "seat-drag-completed">Réussi</label>
+                </div>
+                
+                <div class="score-display">
+                    0 pts
+                </div>
+            </div>
+            
+            <div class="multiplier-controls">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="seat-drag-pb" class=
+                    "personal-best"> <label for="seat-drag-pb">Personal
+                    Best (×2)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="seat-drag-holding"
+                    class="holding-on"> <label for=
+                    "seat-drag-holding">En se tenant (÷2)</label>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="trick" data-trick-id="hop-to-tire-(90-unispin)"
+            data-category="tricks">
+            <div class="trick-header">
+                <div class="trick-name">
+                    Hop to tire (90 unispin)
+                </div>
+                <div class="base-points">
+                    5 pts
+                    
+                </div>
+            </div>
+            
+            <div class="explanation-content">
+              Hop from the pedals to the tire and back
+            </div>
+            
+
+            
+
+            <div class="controls">
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="hop-to-tire-(90-unispin)-completed"
+                    class="completed"> <label for=
+                    "hop-to-tire-(90-unispin)-completed">Réussi</label>
+                </div>
+                
+                <div class="score-display">
+                    0 pts
+                </div>
+            </div>
+            
+            <div class="multiplier-controls">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="hop-to-tire-(90-unispin)-pb" class=
+                    "personal-best"> <label for="hop-to-tire-(90-unispin)-pb">Personal
+                    Best (×2)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="hop-to-tire-(90-unispin)-holding"
+                    class="holding-on"> <label for=
+                    "hop-to-tire-(90-unispin)-holding">En se tenant (÷2)</label>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="trick" data-trick-id="180-unispin"
+            data-category="tricks">
+            <div class="trick-header">
+                <div class="trick-name">
+                    180 unispin
+                </div>
+                <div class="base-points">
+                    15 pts
+                    
+                </div>
+            </div>
+            
+
+            
+
+            <div class="controls">
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="180-unispin-completed"
+                    class="completed"> <label for=
+                    "180-unispin-completed">Réussi</label>
+                </div>
+                
+                <div class="score-display">
+                    0 pts
+                </div>
+            </div>
+            
+            <div class="multiplier-controls">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="180-unispin-pb" class=
+                    "personal-best"> <label for="180-unispin-pb">Personal
+                    Best (×2)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="180-unispin-holding"
+                    class="holding-on"> <label for=
+                    "180-unispin-holding">En se tenant (÷2)</label>
+                </div>
+            </div>
+            
         </div>
            
       </details>
@@ -1480,6 +2192,24 @@
             
 
             
+            <details class="explanation-details">
+                <summary>
+                Details
+                </summary>
+                <div class="explanation-content">
+                
+
+                
+                <img src="images/sloped-curb/across.jpg" alt="Sloped curbs">
+                
+
+                
+
+                
+
+                </div>
+            </details>
+            
 
             <div class="controls">
                 
@@ -1503,12 +2233,30 @@
                     Along Sloped Curbs
                 </div>
                 <div class="base-points">
-                    2 pts
+                    6 pts
                     
                 </div>
             </div>
             
 
+            
+            <details class="explanation-details">
+                <summary>
+                Details
+                </summary>
+                <div class="explanation-content">
+                
+
+                
+                <img src="images/sloped-curb/along.jpg" alt="Sloped curbs">
+                
+
+                
+
+                
+
+                </div>
+            </details>
             
 
             <div class="controls">
@@ -1526,11 +2274,11 @@
             
         </div>
         
-        <div class="trick" data-trick-id="round-ramp-at-action-music"
+        <div class="trick" data-trick-id="round-ramp-at-musée-de-l'histoire-de-la-médecine"
             data-category="locations">
             <div class="trick-header">
                 <div class="trick-name">
-                    Round Ramp at Action Music
+                    Round Ramp at Musée de l'Histoire de la Médecine
                 </div>
                 <div class="base-points">
                     3 pts
@@ -1548,6 +2296,8 @@
                 
 
                 
+                <img src="images/action/curb.jpg" alt="Curved ramp next to stairs">
+                
 
                 
                 <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d207.62612826544571!2d1.4364183954819585!3d43.598927882526894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDPCsDM1JzU2LjUiTiAxwrAyNicxMS44IkU!5e1!3m2!1sen!2sfr!4v1752156561638!5m2!1sen!2sfr" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -1562,9 +2312,9 @@
             <div class="controls">
                 
                 <div class="checkbox-group">
-                    <input type="checkbox" id="round-ramp-at-action-music-completed"
+                    <input type="checkbox" id="round-ramp-at-musée-de-l'histoire-de-la-médecine-completed"
                     class="completed"> <label for=
-                    "round-ramp-at-action-music-completed">Réussi</label>
+                    "round-ramp-at-musée-de-l'histoire-de-la-médecine-completed">Réussi</label>
                 </div>
                 
                 <div class="score-display">
@@ -1581,7 +2331,7 @@
                     Cross 3 bridges in 10 minutes
                 </div>
                 <div class="base-points">
-                    1 pts
+                    3 pts
                     
                 </div>
             </div>
@@ -1665,12 +2415,30 @@
                     Ride up an anti-velo ramp
                 </div>
                 <div class="base-points">
-                    3 pts
+                    5 pts
                     
                 </div>
             </div>
             
 
+            
+            <details class="explanation-details">
+                <summary>
+                Details
+                </summary>
+                <div class="explanation-content">
+                
+
+                
+                <img src="images/anti-velo/small.jpg" alt="Pedestrian bridge with small steps to annoy cyclists">
+                
+
+                
+
+                
+
+                </div>
+            </details>
             
 
             <div class="controls">
@@ -1737,6 +2505,58 @@
             
         </div>
         
+        <div class="trick" data-trick-id="make-a-car-speed-sign-go-red"
+            data-category="locations">
+            <div class="trick-header">
+                <div class="trick-name">
+                    Make a car speed sign go red
+                </div>
+                <div class="base-points">
+                    30 pts
+                    
+                </div>
+            </div>
+            
+            <div class="explanation-content">
+              Ride faster than the speed limit
+            </div>
+            
+
+            
+            <details class="explanation-details">
+                <summary>
+                Details
+                </summary>
+                <div class="explanation-content">
+                
+
+                
+                <img src="images/speed/small.jpg" alt="Speed sign">
+                
+
+                
+
+                
+
+                </div>
+            </details>
+            
+
+            <div class="controls">
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="make-a-car-speed-sign-go-red-completed"
+                    class="completed"> <label for=
+                    "make-a-car-speed-sign-go-red-completed">Réussi</label>
+                </div>
+                
+                <div class="score-display">
+                    0 pts
+                </div>
+            </div>
+            
+        </div>
+        
         <div class="trick" data-trick-id="merry-go-round"
             data-category="locations">
             <div class="trick-header">
@@ -1744,7 +2564,7 @@
                     Merry Go Round
                 </div>
                 <div class="base-points">
-                    1 pts
+                    2 pts
                     
                 </div>
             </div>
@@ -1842,6 +2662,104 @@
                     <input type="checkbox" id="hop-on-the-furniture-on-pont-saint-pierre-completed"
                     class="completed"> <label for=
                     "hop-on-the-furniture-on-pont-saint-pierre-completed">Réussi</label>
+                </div>
+                
+                <div class="score-display">
+                    0 pts
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="trick" data-trick-id="ride-the-wavey-wall-at-rue-saint-jérôme"
+            data-category="locations">
+            <div class="trick-header">
+                <div class="trick-name">
+                    Ride the wavey wall at Rue Saint Jérôme
+                </div>
+                <div class="base-points">
+                    30 pts
+                    
+                </div>
+            </div>
+            
+
+            
+            <details class="explanation-details">
+                <summary>
+                Details
+                </summary>
+                <div class="explanation-content">
+                
+
+                
+                <img src="images/wall-ramp/raw.jpg" alt="Photo of the wall">
+                
+
+                
+                <iframe src="https://maps.app.goo.gl/p38wP5PbTCVkQjmQ9" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+
+                
+
+                </div>
+            </details>
+            
+
+            <div class="controls">
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="ride-the-wavey-wall-at-rue-saint-jérôme-completed"
+                    class="completed"> <label for=
+                    "ride-the-wavey-wall-at-rue-saint-jérôme-completed">Réussi</label>
+                </div>
+                
+                <div class="score-display">
+                    0 pts
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="trick" data-trick-id="ride-along-the-edge-of-the-garonne"
+            data-category="locations">
+            <div class="trick-header">
+                <div class="trick-name">
+                    Ride along the edge of the Garonne
+                </div>
+                <div class="base-points">
+                    5 pts
+                    
+                </div>
+            </div>
+            
+
+            
+            <details class="explanation-details">
+                <summary>
+                Details
+                </summary>
+                <div class="explanation-content">
+                
+
+                
+                <img src="images/garonne/small.jpg" alt="Garonne photo">
+                
+
+                
+
+                
+
+                </div>
+            </details>
+            
+
+            <div class="controls">
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="ride-along-the-edge-of-the-garonne-completed"
+                    class="completed"> <label for=
+                    "ride-along-the-edge-of-the-garonne-completed">Réussi</label>
                 </div>
                 
                 <div class="score-display">
@@ -1977,6 +2895,74 @@
                     <input type="checkbox" id="outrun-a-tram-completed"
                     class="completed"> <label for=
                     "outrun-a-tram-completed">Réussi</label>
+                </div>
+                
+                <div class="score-display">
+                    0 pts
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="trick" data-trick-id="ride-barefoot"
+            data-category="silly">
+            <div class="trick-header">
+                <div class="trick-name">
+                    Ride barefoot
+                </div>
+                <div class="base-points">
+                    3 pts
+                    
+                </div>
+            </div>
+            
+            <div class="explanation-content">
+              At least 30 meters
+            </div>
+            
+
+            
+
+            <div class="controls">
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="ride-barefoot-completed"
+                    class="completed"> <label for=
+                    "ride-barefoot-completed">Réussi</label>
+                </div>
+                
+                <div class="score-display">
+                    0 pts
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="trick" data-trick-id="ride-someone-else's-unicycle"
+            data-category="silly">
+            <div class="trick-header">
+                <div class="trick-name">
+                    Ride someone else's unicycle
+                </div>
+                <div class="base-points">
+                    1 pts
+                    
+                </div>
+            </div>
+            
+            <div class="explanation-content">
+              With permissions
+            </div>
+            
+
+            
+
+            <div class="controls">
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="ride-someone-else's-unicycle-completed"
+                    class="completed"> <label for=
+                    "ride-someone-else's-unicycle-completed">Réussi</label>
                 </div>
                 
                 <div class="score-display">
@@ -2145,45 +3131,57 @@
             
         </div>
         
-        <div class="trick" data-trick-id="ride-along-the-edge-of-the-garonne"
+        <div class="trick" data-trick-id="flat-tire"
             data-category="silly">
             <div class="trick-header">
                 <div class="trick-name">
-                    Ride along the edge of the Garonne
+                    Flat tire
                 </div>
-                <div class="base-points">
-                    5 pts
+                <div class="base-points negative">
+                    -10 pts
                     
                 </div>
             </div>
             
 
             
-            <details class="explanation-details">
-                <summary>
-                Details
-                </summary>
-                <div class="explanation-content">
-                
 
+            <div class="controls">
                 
-                <img src="images/garonne/small.jpg" alt="Garonne photo">
-                
-
-                
-
-                
-
+                <div class="checkbox-group">
+                    <input type="checkbox" id="flat-tire-completed"
+                    class="completed"> <label for=
+                    "flat-tire-completed">Réussi</label>
                 </div>
-            </details>
+                
+                <div class="score-display">
+                    0 pts
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="trick" data-trick-id="replace/repair-a-flat-tire-in-less-than-4-minutes"
+            data-category="silly">
+            <div class="trick-header">
+                <div class="trick-name">
+                    Replace/repair a flat tire in less than 4 minutes
+                </div>
+                <div class="base-points">
+                    10 pts
+                    
+                </div>
+            </div>
+            
+
             
 
             <div class="controls">
                 
                 <div class="checkbox-group">
-                    <input type="checkbox" id="ride-along-the-edge-of-the-garonne-completed"
+                    <input type="checkbox" id="replace/repair-a-flat-tire-in-less-than-4-minutes-completed"
                     class="completed"> <label for=
-                    "ride-along-the-edge-of-the-garonne-completed">Réussi</label>
+                    "replace/repair-a-flat-tire-in-less-than-4-minutes-completed">Réussi</label>
                 </div>
                 
                 <div class="score-display">

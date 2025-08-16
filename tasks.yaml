@@ -1,100 +1,134 @@
 - name: sauts
   tasks:
   - name: Hop up a curb
-    multipliers: true
+    standard_multipliers: true
     points: 3
   - name: Hop down a curb
     explanation: Hop or roll down
-    multipliers: true
-    points: 3
+    standard_multipliers: true
+    points: 2
   - name: Hop up a curb no hands
     explanation: Do not hold on to the seat
-    multipliers: true
+    standard_multipliers: true
     points: 4
   - name: Hop up a steep slope
-    multipliers: true
+    standard_multipliers: true
     points: 4
   - name: Hop up a curb front on
     explanation: Hop forwards, not sideways
-    multipliers: true
+    standard_multipliers: true
     points: 4
   - name: Hop up stairs
     explanation: Jump one step per time
-    multipliers: true
+    standard_multipliers: true
     points: 3
     unit: step
   - name: Leap over stairs
     explanation: Jump up many steps in one leap
-    multipliers: true
+    standard_multipliers: true
     points: 4
     unit: step
   - name: Ride down stairs
-    multipliers: true
-    points: 5
+    standard_multipliers: true
+    points: 3
     unit: step
   - name: Leap down stairs
     explanation: Jump down many steps in one leap
-    multipliers: true
-    points: 4
+    standard_multipliers: true
+    points: 3
     unit: step
   - name: High Jump
     explanation: Jump up to a platform
-    multipliers: true
-    points: 1
+    standard_multipliers: true
+    points: 10
     unit: 10cm
   - name: Long Jump
-    explanation: Jump far horizontally
-    multipliers: true
-    points: 1
+    explanation: Jump far horizontally. Can be on the ground.
+    standard_multipliers: true
+    points: 4
     unit: 10cm
+  - name: Gap
+    explanation: Jump far horizontally, from ontop of one object to another. (Can count the same jump for a gap and long jump.)
+    standard_multipliers: true
+    points: 4
+    unit: 10cm
+    detils:
+      photos:
+      - path: images/gap/screenshot.png
+        alt: diagram
   - name: Drop
     explanation: Jump down from something high
-    multipliers: true
-    points: 1
+    standard_multipliers: true
+    points: 5
     unit: 10cm
+  - name: Hop down a curb while riding backwards
+    standard_multipliers: true
+    points: 5
 - name: riding
   tasks:
   - name: Ride on grass
     explanation: At least 10 meters
-    multipliers: true
+    standard_multipliers: true
     points: 1
   - name: Ride seat infront
     explanation: While riding, pull the seat out from between your legs, and hold it infront of you
-    multipliers: true
+    standard_multipliers: true
     points: 3
   - name: Ride seat behind
     explanation: While riding, pull the seat out from between your legs, and hold it behind you
-    multipliers: true
+    standard_multipliers: true
     points: 3
   - name: Weave between bolards
     points: 1
-    # TODO: add photo
+    unit: bolard
+    details:
+      photos:
+      - path: images/bolard-weave/small.jpg
+        alt: bolards with arrows
   - name: one-foot
     explanation: Ride with only one foot on the pedal
-    multipliers: true
-    points: 3
-  - name: wheel walk
-    multipliers: true
+    standard_multipliers: true
     points: 5
-  - name: glide
-    multipliers: true
+  - name: wheel walk
+    standard_multipliers: true
     points: 10
+  - name: glide
+    standard_multipliers: true
+    points: 15
   - name: ride backwards
-    multipliers: true
+    standard_multipliers: true
     points: 3
   - name: ride up a steep hill
-    multipliers: true
+    standard_multipliers: true
     points: 1
   - name: ride down a steep hill
-    multipliers: true
+    standard_multipliers: true
     points: 1
   - name: ride a skinny
-    multipliers: true
+    explanation: On the tire
+    standard_multipliers: true
     points: 8
-    # TODO: photo
+    details:
+      photos:
+      - path: images/skinny/small.jpg
+        alt: photo of skinny
+  - name: still stand
+    standard_multipliers: true
+    points: 2
+    unit: second
+  - name: ride down a steep hill
+    standard_multipliers: true
+    points: 1
 - name: obstacles
   tasks:
   - name: Lego Bolard
+    points: 10
+    details:
+      text: You may mount and dismount ontop of the bolard. After mounting, you can hop/ride on the bumps or the gaps in between.
+      photos:
+      - path: "images/lego/small.jpg"
+        alt: "lego bolard"
+  - name: Lego Bolard - Piques
     points: 10
     details:
       text: You may mount and dismount ontop of the bolard. After mounting, you must hop only ontop of the bumps.
@@ -105,44 +139,100 @@
     points: 10
   - name: Unicycle falls into water
     points: -10
-  - name: Unicyclist falls (os jumps) into water
+  - name: Unicyclist falls (or jumps) into water
     points: 5
   - name: Ride on kids play equipment
     points: 5
+  - name: Hop along wooden playground poles
+    points: 5
+    unit: pole
+    details:
+      photos:
+      - path: images/wood-pole-steps/dragon-small.jpg
+        alt: Zoomed in
+      # - path: images/wood-pole-steps/daurade-small.jpg
+      #   alt: Port de Daurade
 - name: tricks
   tasks:
-  - name: Jump Rev
+  - name: Half Rev
     explanation: Ride, jump, rotate the wheel half a revolution (180 degrees)
     points: 2
-    multipliers: true
-  - name: Different Monuts
+    standard_multipliers: true
+  - name: Full Rev
+    explanation: Ride, jump, rotate the wheel a full revolution (360 degrees)
+    points: 3
+    standard_multipliers: true
+  - name: Hop Twist
+    explanation: Ride, jump, spin left/right 180 degrees, then land backwards
+    points: 3
+    standard_multipliers: true
+  - name: Different Mounts
     explanation: Mount the unicycle many different ways
     details:
-      text: Roll-back mount, running mount, side mount, kick-up mount
+      text: Roll-back mount, running mount, side mount, kick-up mount etc. Double points if it's your first time ever.
     points: 3
-    units: mount
+    unit: mount
   - name: Mount while off the ground
     explanation: e.g. stand on a table and mount
-    points: 1
+    points: 3
+    standard_multipliers: true
   - name: Grind
-    points: 15
+    points: 5
+    unit: 5cm
+    standard_multipliers: true
+  - name: Pedal grab
+    points: 10
+    standard_multipliers: true
   - name: Crank grab
     points: 10
+    standard_multipliers: true
+  - name: Crank/pedal grab from above
+    explanation: Mount something tall. Jump down into a pedal or crank grab, then back up.
+    points: 10
+    standard_multipliers: true
+    details:
+      photos:
+      - path: images/crank-grab-down/screenshot.png
+        alt: Diagram
+  - name: Seat Drag
+    points: 10
+    standard_multipliers: true
+    details:
+      photos:
+      - path: images/seat-drag/infront.png
+        alt: Seat drag trick
+  
+  - name: Hop to tire (90 unispin)
+    explanation: Hop from the pedals to the tire and back
+    points: 5
+    standard_multipliers: true
+  - name: 180 unispin
+    points: 15
+    standard_multipliers: true
+        
 - name: Locations
   tasks:
   - name: Across Sloped Curbs
     points: 1
-    # TODO: add photo
+    details:
+      photos:
+      - path: images/sloped-curb/across.jpg
+        alt: Sloped curbs
   - name: Along Sloped Curbs
-    points: 2
-    # TODO: add photo
-  - name: Round Ramp at Action Music
+    points: 6
+    details:
+      photos:
+      - path: images/sloped-curb/along.jpg
+        alt: Sloped curbs
+  - name: Round Ramp at Musée de l'Histoire de la Médecine
     points: 3
     details:
-      # TODO: add photo
+      photos:
+      - path: images/action/curb.jpg
+        alt: Curved ramp next to stairs
       location: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d207.62612826544571!2d1.4364183954819585!3d43.598927882526894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDPCsDM1JzU2LjUiTiAxwrAyNicxMS44IkU!5e1!3m2!1sen!2sfr!4v1752156561638!5m2!1sen!2sfr"
   - name: Cross 3 bridges in 10 minutes
-    points: 1
+    points: 3
   - name: Ride an electric bolard while it moves up
     points: 20
     details:
@@ -152,8 +242,11 @@
       - path: videos/bolard/output.webm
         type: video/webm
   - name: Ride up an anti-velo ramp
-    points: 3
-    # TODO: photo
+    points: 5
+    details:
+      photos:
+      - path: images/anti-velo/small.jpg
+        alt: Pedestrian bridge with small steps to annoy cyclists
   - name: Trigger a car speed sign
     points: 1
     unit: "km/h"
@@ -161,9 +254,16 @@
       photos:
       - path: images/speed/small.jpg
         alt: Speed sign
+  - name: Make a car speed sign go red
+    explanation: Ride faster than the speed limit
+    points: 30
+    details:
+      photos:
+      - path: images/speed/small.jpg
+        alt: Speed sign
   - name: Merry Go Round
     explanation: Ride around the outside of a merry-go-round, at the same speed as it
-    points: 1
+    points: 2
   - name: Hop over a pedestrian crossing, touching only the white parts
     points: 5
   - name: Hop on the furniture on Pont Saint-Pierre
@@ -173,6 +273,20 @@
       - path: images/bridge-furniture/small.jpg
         alt: Photo of seat on bridge
       location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.820327825525!2d1.432445076174121!3d43.60250897110457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebb65a20999b5%3A0x72c37c4cc3ed9ede!2sPont%20Saint-Pierre!5e1!3m2!1sen!2sfr!4v1752158787271!5m2!1sen!2sfr"
+  - name: Ride the wavey wall at Rue Saint Jérôme
+    points: 30
+    details:
+      photos:
+      - path: images/wall-ramp/raw.jpg
+        alt: Photo of the wall
+      location: "https://maps.app.goo.gl/p38wP5PbTCVkQjmQ9"
+  - name: Ride along the edge of the Garonne
+    points: 5
+    details:
+      photos:
+      - path: "images/garonne/small.jpg"
+        alt: "Garonne photo"
+  
 - name: silly
   tasks:
   - name: Buy something and eat it
@@ -184,6 +298,12 @@
     points: 5
   - name: Outrun a tram
     points: 6
+  - name: Ride barefoot
+    explanation: At least 30 meters
+    points: 3
+  - name: Ride someone else's unicycle
+    explanation: With permissions
+    points: 1
   - name: Do a chin up
     explanation: Whilst on a unicycle
     points: 3
@@ -197,10 +317,7 @@
     points: 5
   - name: Ride 20m with a cup of water on your head
     points: 5
-  - name: Ride along the edge of the Garonne
-    points: 5
-    details:
-      photos:
-      - path: "images/garonne/small.jpg"
-        alt: "Garonne photo"
-  
+  - name: Flat tire
+    points: -10
+  - name: Replace/repair a flat tire in less than 4 minutes
+    points: 10

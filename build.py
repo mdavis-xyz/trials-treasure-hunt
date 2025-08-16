@@ -5,7 +5,7 @@ import os
 import shutil
 from pathlib import Path
 
-target_dir = Path('public')
+target_dir = Path('docs')
 
 with open('tasks.yaml', 'r') as f:
     all_tasks = yaml.safe_load(f)

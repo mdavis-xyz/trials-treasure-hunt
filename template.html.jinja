@@ -13,13 +13,19 @@
   <div class="container">
     <div class="header">
       <h1>Toulouse Treasure Hunt</h1>
-      <p>Feuille de score pour tricks de monocycle</p>
+      <p>
+        Feuille de score pour épreuves de monocycle.
+      </p>
+      <p>
+        Pour certaines épreuves, si tu ne  l'as jamais réussi avant, ou jamais d'aussi loin, les points sont doublés.
+        Si tu prends la main de quelqu'un, tu obtiens la moitié des points.
+      </p>
     </div>
     {% for category in all_tasks %}
     <section class="category" data-category="{{ category['id'] }}">
       <details>
         <summary class="category-header">
-          {{ category['name'] }}
+          {{ category['name'][lang] }}
           <span class="category-progress" data-category=
           "{{ category['id'] }}"></span>
         </summary>
@@ -28,18 +34,18 @@
             data-category="{{ category['id'] }}">
             <div class="trick-header">
                 <div class="trick-name">
-                    {{ task['name'] }}
+                    {{ task['name'][lang] }}
                 </div>
                 <div class="{{ 'base-points negative' if task['points'] < 0 else 'base-points' }}">
                     {{ task['points'] }} pts
-                    {% if task.get('unit') %}
-                    / {{ task['unit'] }}
+                    {% if task.get('unit', {}).get(lang) %}
+                    / {{ task['unit'][lang] }}
                     {% endif %}
                 </div>
             </div>
-            {% if task.get('explanation') %}
+            {% if task.get('explanation', {}).get(lang) %}
             <div class="explanation-content">
-              {{ task['explanation'] }}
+              {{ task['explanation'][lang] }}
             </div>
             {% endif %}
 
@@ -49,8 +55,8 @@
                 Details
                 </summary>
                 <div class="explanation-content">
-                {% if task['details'].get('text') %}
-                    {{ task['details']['text'] }}
+                {% if task['details'].get('text', {}).get(lang) %}
+                    {{ task['details']['text'][lang] }}
                 {% endif %}
 
                 {% for img in task['details'].get('photos', []) %}
@@ -74,9 +80,9 @@
             {% endif %}
 
             <div class="controls">
-                {% if task.get('unit') %}
+                {% if task.get('unit', {}).get(lang) %}
                 <label for="{{ task['id'] }}-count">Nombre de
-                {{ task['unit'] }}:</label> <input type="number" id=
+                {{ task['unit'][lang] }}:</label> <input type="number" id=
                 "{{ task['id'] }}-count" min="0" value="0" class=
                 "quantity">
                 {% else %}

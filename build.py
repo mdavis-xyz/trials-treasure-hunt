@@ -7,26 +7,35 @@ from pathlib import Path
 
 target_dir = Path('docs')
 
+lang = "fr"
+
 with open('tasks.yaml', 'r') as f:
     all_tasks = yaml.safe_load(f)
 
+def capitalise(s): 
+    return s[0].upper() + s[1:]
+
+
+all_tasks = [c for c in all_tasks if not c.get('example')]
+
 for category in all_tasks:
-    category['id'] = category['name'].replace(' ', '-').lower()
+    category['id'] = category['name'][lang].replace(' ', '-').lower()
     for task in category['tasks']:
         try:
-            task['id'] = task['name'].replace(' ', '-').lower()
+            task['id'] = task['name'][lang].replace(' ', '-').lower()
         except KeyError:
-            print(f"Bad task: {task} within category {category['name']}")
+            print(f"Bad task: {task} within category {category['name'][lang]}")
             raise
         assert 'points' in task, f"Task {task['id']} has no points specified"
 
         # capitalise
-        task['name'] = task['name'][0].upper() + task['name'][1:]
+        assert lang in task['name'], f"Task {task['name']} has no entry for {lang}"
+        task['name'][lang] = capitalise(task['name'][lang])
 
 env = Environment(loader=FileSystemLoader('.'))
 template = env.get_template('template.html.jinja')
 
-rendered = template.render(all_tasks=all_tasks)
+rendered = template.render(all_tasks=all_tasks, lang=lang)
 
 # empty the build dir
 if target_dir.exists():

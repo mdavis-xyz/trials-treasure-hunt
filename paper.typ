@@ -36,7 +36,7 @@
   grid(
     columns: (4fr, 1fr),
     [
-      #align(center, text(30pt)[Chasse au trésor du Trials])
+      #align(center, text(30pt)[Chasse au Trésor du Trials])
       #v(-30pt)
       Feuille de score pour épreuves de monocycle.
       Pour certaines épreuves, si tu ne  l'as jamais réussi avant, ou jamais d'aussi loin, les points sont doublés.

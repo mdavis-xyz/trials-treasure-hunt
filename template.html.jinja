@@ -75,6 +75,14 @@
                 </video>
                 {% endif %}
 
+                {% if task['details'].get('iframes') %}
+                  {% for iframe in task['details']['iframes'] %}
+                  <iframe src="{{ iframe['path'] }}" title="description">
+                    {{ iframe['alt'] }}
+                  </iframe> 
+                  {% endfor %}
+                {% endif %}
+
                 </div>
             </details>
             {% endif %}

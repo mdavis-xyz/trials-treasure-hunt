@@ -56,7 +56,7 @@ with open(output_path, 'rb') as f:
 # not the full raw data
 for category in all_tasks:
     for task in category['tasks']:
-        for media_type in ['photos', 'video']:
+        for media_type in ['photos', 'video', 'iframes']:
             for media in task.get("details", {}).get(media_type, []):
                 src_path = Path(media['path'])
                 dest_path = target_dir / src_path.relative_to('.')

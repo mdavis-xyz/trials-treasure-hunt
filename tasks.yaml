@@ -456,7 +456,7 @@
         alt: Curved ramp next to stairs
       location: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d207.62612826544571!2d1.4364183954819585!3d43.598927882526894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDPCsDM1JzU2LjUiTiAxwrAyNicxMS44IkU!5e1!3m2!1sen!2sfr!4v1752156561638!5m2!1sen!2sfr"
   - name:
-      fr: Traverser 3 points en 10 minutes
+      fr: Traverser 3 ponts en 10 minutes
       en: Cross 3 bridges in 10 minutes
     points: 3
   - name:
@@ -488,6 +488,9 @@
       photos:
       - path: images/speed/small.jpg
         alt: Speed sign
+      iframes: 
+      - path: "radar/toulouse_cameras.html"
+        alt: Map of speed cameras
   # - name:
   #     fr: Déclencher le radar pédagogique en rouge
   #     en: Make a car speed sign go red
@@ -599,7 +602,7 @@
       fr: monocyclist
       en: rider
   - name:
-      fr: Sauter le déjuner
+      fr: Sauter le déjeuner
       en: Jump over your lunch
     points: 5
   - name:

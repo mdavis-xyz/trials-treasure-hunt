@@ -7,12 +7,13 @@ from pathlib import Path
 
 target_dir = Path('docs')
 
-lang = "fr"
+#lang = "fr"
+lang = "en"
 
 with open('tasks.yaml', 'r') as f:
     all_tasks = yaml.safe_load(f)
 
-def capitalise(s): 
+def capitalise(s):
     return s[0].upper() + s[1:]
 
 
@@ -60,7 +61,7 @@ for category in all_tasks:
             for media in task.get("details", {}).get(media_type, []):
                 src_path = Path(media['path'])
                 dest_path = target_dir / src_path.relative_to('.')
-                
+
                 print(f"Copying {src_path} to {dest_path}")
                 dest_path.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(src_path, dest_path)

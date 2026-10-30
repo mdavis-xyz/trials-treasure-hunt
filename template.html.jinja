@@ -6,7 +6,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content=
   "width=device-width, initial-scale=1.0">
-  <title>Chasse au trésor</title>
+  <title>
+    {% if lang == "fr" %}
+    Chasse au trésor
+    {% else %}
+    Treasure Hunt
+    {% endif %}
+  </title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,11 +20,21 @@
     <div class="header">
       <h1>Toulouse Treasure Hunt</h1>
       <p>
+        {% if lang == "fr" %}
         Feuille de score pour épreuves de monocycle.
+        {% else %}
+        Score-sheet for unicycle tasks.
+        {% endif %}
       </p>
       <p>
+        {% if lang == "fr" %}
         Pour certaines épreuves, si tu ne  l'as jamais réussi avant, ou jamais d'aussi loin, les points sont doublés.
         Si tu prends la main de quelqu'un, tu obtiens la moitié des points.
+        {% else %}
+        For some tasks, if you have never completed it before, or never as far, you win double points.
+
+        For some tasks, if you hold someone's hand to help you, you still win half points.
+        {% endif %}
       </p>
     </div>
     {% for category in all_tasks %}
@@ -79,7 +95,7 @@
                   {% for iframe in task['details']['iframes'] %}
                   <iframe src="{{ iframe['path'] }}" title="description">
                     {{ iframe['alt'] }}
-                  </iframe> 
+                  </iframe>
                   <a href="{{ iframe['path'] }}" target="_blank">Niveau Onglet</a>
                   {% endfor %}
                 {% endif %}
@@ -90,7 +106,12 @@
 
             <div class="controls">
                 {% if task.get('unit', {}).get(lang) %}
-                <label for="{{ task['id'] }}-count">Nombre de
+                <label for="{{ task['id'] }}-count">
+                    {% if lang == "fr" %}
+                    Nombre de
+                    {% else %}
+                    Number of
+                    {% endif %}
                 {{ task['unit'][lang] }}:</label> <input type="number" id=
                 "{{ task['id'] }}-count" min="0" value="0" class=
                 "quantity">
@@ -98,7 +119,13 @@
                 <div class="checkbox-group">
                     <input type="checkbox" id="{{ task['id'] }}-completed"
                     class="completed"> <label for=
-                    "{{ task['id'] }}-completed">Réussi</label>
+                    "{{ task['id'] }}-completed">
+                        {% if lang == "fr" %}
+                        Réussi
+                        {% else %}
+                        Done
+                        {% endif %}
+                    </label>
                 </div>
                 {% endif %}
                 <div class="score-display">
@@ -115,12 +142,19 @@
                 <div class="checkbox-group">
                     <input type="checkbox" id="{{ task['id'] }}-holding"
                     class="holding-on"> <label for=
-                    "{{ task['id'] }}-holding">En se tenant (÷2)</label>
+                    "{{ task['id'] }}-holding">
+                        {% if lang == "fr" %}
+                        En se tenant
+                        {% else %}
+                        Holding someone's hand
+                        {% endif %}
+                        (÷2)
+                    </label>
                 </div>
             </div>
             {% endif %}
         </div>
-        {% endfor %}   
+        {% endfor %}
       </details>
     </section>
     {% endfor %}
